@@ -1,0 +1,6 @@
+@Backend.Datatables.net_HostAddress = http://localhost:5220
+
+GET {{Backend.Datatables.net_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
