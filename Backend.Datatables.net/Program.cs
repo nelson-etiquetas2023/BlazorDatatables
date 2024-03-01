@@ -1,4 +1,5 @@
 using Backend.Datatables.net.Data;
+using Backend.Datatables.net.Services;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -10,6 +11,11 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<DataContext>(x => x.UseSqlServer("name=ConnectionEtiquetas"));
+
+builder.Services.AddScoped<IServiceControlAsistencia, ServiceControlAsistencia>();
+
+
+
 
 var app = builder.Build();
 
